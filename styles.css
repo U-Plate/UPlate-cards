@@ -1,0 +1,218 @@
+:root {
+  color-scheme: dark;
+  --bg: #050505;
+  --panel: #090908;
+  --panel-soft: #11100d;
+  --gold: #c9b36a;
+  --gold-dim: #8d8157;
+  --gold-faint: rgba(201, 179, 106, 0.18);
+  --text: #f4f0e4;
+  --muted: #aaa49a;
+  --line: rgba(201, 179, 106, 0.22);
+  --shadow: rgba(0, 0, 0, 0.35);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.shell {
+  width: min(100%, 520px);
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  min-height: min(700px, calc(100vh - 48px));
+  padding: clamp(28px, 7vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 24px 80px var(--shadow);
+}
+
+.directory-card {
+  min-height: auto;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  display: block;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: #0a0a09;
+  background-image: url("https://i.postimg.cc/MGw9xFRg/UPlate(1).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 1px rgba(201, 179, 106, 0.2);
+}
+
+.brand-name,
+.brand-line,
+.eyebrow,
+.person-role,
+.person-meta,
+.footer {
+  margin: 0;
+}
+
+.brand-name {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.brand-line {
+  margin-top: 5px;
+  color: var(--gold-dim);
+  font-size: 16px;
+  font-weight: 520;
+}
+
+.rule {
+  height: 1px;
+  margin: 26px 0;
+  background: linear-gradient(90deg, var(--line), transparent);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--gold-faint);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: clamp(34px, 11vw, 54px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.person-role {
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 620;
+}
+
+.person-meta,
+.lede {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 18px;
+  border: 1px solid rgba(201, 179, 106, 0.28);
+  border-radius: 8px;
+  background: var(--panel-soft);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 660;
+}
+
+.action span {
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.action:focus-visible,
+.card-list a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.footer {
+  margin-top: 44px;
+  color: var(--gold-dim);
+  font-size: 14px;
+  font-weight: 650;
+  text-align: center;
+}
+
+.card-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.card-list a {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-soft);
+  color: var(--text);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+@media (min-width: 680px) {
+  .page {
+    padding: 42px 24px;
+  }
+}
